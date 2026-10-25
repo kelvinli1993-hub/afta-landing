@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afta — Clarity, dignity, and care for what comes after</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Clean UI Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            linen: {
+              50: '#FAF8F5',
+              100: '#F4EFE6',
+              200: '#EAE2D5',
+              300: '#DCD1C0',
+              400: '#C7B9A3',
+            },
+            forest: {
+              900: '#12221A',
+              850: '#16291F',
+              800: '#1B3126',
+              700: '#234233',
+              600: '#2D5441',
+              500: '#3D6F56',
+            },
+            sage: {
+              50: '#F3F6F4',
+              100: '#E4ECE6',
+              200: '#C7D9CC',
+              300: '#A3BEAB',
+              400: '#7B9482',
+              500: '#5C7463',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .paper-texture {
+      background-image: radial-gradient(rgba(27, 49, 38, 0.035) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .border-warm {
+      border-color: rgba(27, 49, 38, 0.12);
+    }
+    .border-warm-subtle {
+      border-color: rgba(27, 49, 38, 0.07);
+    }
+  </style>
+</head>
+
+<body class="bg-linen-50 text-forest-900 font-sans antialiased selection:bg-sage-200 selection:text-forest-900 paper-texture relative min-h-screen">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <aside aria-label="Announcement" class="bg-forest-900 text-linen-100 text-xs py-2.5 px-4 text-center border-b border-forest-800 flex items-center justify-center gap-2">
+    <span>Limited Beta Release: Now collaborating with Ontario funeral homes.</span>
+    <a href="https://app.afta.ca" class="underline underline-offset-2 hover:text-white font-medium ml-1">Learn More &rarr;</a>
+  </aside>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-linen-50/90 backdrop-blur-md border-b border-warm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <span class="w-9 h-9 rounded-full bg-forest-800 text-linen-50 flex items-center justify-center font-serif text-xl italic font-semibold shadow-sm group-hover:bg-forest-700 transition">A</span>
+        <div>
+          <span class="font-serif text-2xl tracking-tight font-medium text-forest-800 block leading-tight">Afta</span>
+          <span class="text-[10px] tracking-widest uppercase font-medium text-forest-800/60 block">Afterlife Assistant</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-forest-800/80">
+        <a href="#how-it-works" class="hover:text-forest-900 transition">How it Works</a>
+        <a href="#why-afta" class="hover:text-forest-900 transition">Why Afta</a>
+        <a href="#security" class="hover:text-forest-900 transition">Security</a>
+        <a href="#contact" class="hover:text-forest-900 transition">Contact</a>
+      </nav>
+
+      <!-- Action Buttons Linking to Live App -->
+      <div class="flex items-center gap-4">
+        <a href="https://app.afta.ca" class="hidden lg:inline-block text-xs font-medium text-forest-800/80 hover:text-forest-900 transition">
+          Join as a Partner
+        </a>
+        <a href="https://app.afta.ca" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-forest-800 text-linen-50 hover:bg-forest-700 transition shadow-sm hover:shadow">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- HERO SECTION -->
+    <section class="pt-16 pb-16 md:pt-24 md:pb-24 px-6 border-b border-warm-subtle">
+      <div class="max-w-4xl mx-auto text-center">
+        
+        <!-- Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-linen-200/70 border border-warm text-[11px] font-semibold tracking-wider uppercase text-forest-800 mb-8">
+          <span class="w-2 h-2 rounded-full bg-forest-600 animate-pulse"></span>
+          Your Afterlife Assistant
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-forest-900 leading-[1.08] mb-8">
+          Clarity, dignity, and care for <br class="hidden sm:inline" />
+          what comes <em class="italic font-serif font-light text-forest-800">after.</em>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-base sm:text-lg md:text-xl text-forest-800/80 max-w-2xl mx-auto font-light leading-relaxed mb-10">
+          When someone passes, their family faces over 120 bureaucratic tasks. Afta is the intelligent, compassionate estate navigator that gently steps in so you can focus on remembering.
+        </p>
+
+        <!-- CTA Buttons Linking to Live App -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-10">
+          <a 
+            href="https://app.afta.ca" 
+            class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-forest-800 hover:bg-forest-700 text-linen-50 text-xs font-semibold uppercase tracking-wider transition shadow-sm hover:shadow"
+          >
+            Contact us to join the beta
+          </a>
+          <a 
+            href="#how-it-works" 
+            class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white/80 hover:bg-white text-forest-800 border border-warm text-xs font-semibold uppercase tracking-wider transition shadow-2xs"
+          >
+            See how it works
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-forest-800/70 font-medium">
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-forest-700"></i> Zero-knowledge vault</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-forest-700"></i> Human-in-the-loop empathy</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-forest-700"></i> Google Play Security compliant</span>
+        </div>
+
+        <!-- Hero Visual Banner & Testimonial -->
+        <div class="mt-14 relative rounded-3xl overflow-hidden border border-warm shadow-xl max-w-3xl mx-auto">
+          <img 
+            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=80" 
+            alt="Sunlight shining through tree canopy" 
+            class="w-full h-72 sm:h-96 object-cover filter brightness-[0.92]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-forest-900/80 via-forest-900/20 to-transparent flex items-end p-6 sm:p-8">
+            <div class="bg-white/90 backdrop-blur-md border border-warm rounded-2xl p-5 max-w-md text-left shadow-lg">
+              <p class="text-xs sm:text-sm font-serif italic text-forest-900 leading-snug mb-2">
+                &ldquo;Afta helped my family navigate my father’s estate with dignity, saving us dozens of hours of stress.&rdquo;
+              </p>
+              <p class="text-[11px] font-semibold tracking-wider uppercase text-forest-800/70">Sarah M., Ontario</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRODUCT WORKSPACE PREVIEW -->
+    <section id="how-it-works" class="py-20 md:py-28 px-6 bg-linen-100/40 border-b border-warm-subtle">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-semibold tracking-widest uppercase text-forest-800/60 block mb-3">Browse Afta</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-forest-900 leading-tight mb-4">
+            A calm workspace built for the most delicate chapter.
+          </h2>
+          <p class="text-sm sm:text-base text-forest-800/75 font-light">
+            Everything needed to report a loss, settle an estate, and memorialize a loved one in one secure, shared space that adapts to your situation.
+          </p>
+        </div>
+
+        <!-- Dashboard Canvas Mockup -->
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-warm shadow-xl overflow-hidden">
+          
+          <!-- Mockup Window Bar -->
+          <div class="px-6 py-4 bg-linen-100/80 border-b border-warm flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-forest-800/20"></span>
+              <span class="w-3 h-3 rounded-full bg-forest-800/20"></span>
+              <span class="w-3 h-3 rounded-full bg-forest-800/20"></span>
+            </div>
+            <div class="text-xs font-mono text-forest-800/70 flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-forest-700"></i>
+              Arthur M. Campbell &bull; Case #ON-2024-8842 &bull; Status: In Progress
+            </div>
+            <a href="https://app.afta.ca" class="text-[11px] font-semibold text-forest-800 hover:text-forest-900 flex items-center gap-1">
+              Open App <i data-lucide="external-link" class="w-3 h-3"></i>
+            </a>
+          </div>
+
+          <!-- Interactive Tab Switcher -->
+          <div class="border-b border-warm px-6 flex gap-6 overflow-x-auto text-xs font-medium text-forest-800/70 bg-linen-50/50">
+            <button onclick="switchTab('checklist')" id="tab-btn-checklist" class="py-4 border-b-2 border-forest-800 text-forest-900 font-semibold transition whitespace-nowrap">
+              Immediate Checklist
+            </button>
+            <button onclick="switchTab('vault')" id="tab-btn-vault" class="py-4 border-b-2 border-transparent hover:text-forest-900 transition whitespace-nowrap">
+              Document Vault
+            </button>
+            <button onclick="switchTab('forms')" id="tab-btn-forms" class="py-4 border-b-2 border-transparent hover:text-forest-900 transition whitespace-nowrap">
+              Official Forms
+            </button>
+            <button onclick="switchTab('collab')" id="tab-btn-collab" class="py-4 border-b-2 border-transparent hover:text-forest-900 transition whitespace-nowrap">
+              Family Collaboration
+            </button>
+          </div>
+
+          <!-- Dynamic Panel Content -->
+          <div class="p-6 sm:p-8">
+            
+            <!-- TAB 1: CHECKLIST -->
+            <div id="tab-content-checklist" class="block">
+              <div class="grid md:grid-cols-12 gap-6 items-start">
+                
+                <!-- Left Profile Summary Card -->
+                <div class="md:col-span-4 p-5 rounded-2xl bg-linen-100/60 border border-warm space-y-3">
+                  <div>
+                    <h4 class="font-serif text-lg font-medium text-forest-900">Arthur M. Campbell</h4>
+                    <p class="text-xs text-forest-800/70">Passed March 14, 2024 &bull; Ontario, Canada</p>
+                  </div>
+                  <div class="pt-2 border-t border-warm-subtle">
+                    <p class="text-xs font-medium text-forest-900">3 of 14 tasks completed</p>
+                    <div class="w-full bg-linen-300 rounded-full h-1.5 mt-1.5">
+                      <div class="bg-forest-700 h-1.5 rounded-full w-[21%]"></div>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-warm-subtle text-[11px] text-forest-800/70">
+                    <span class="font-medium text-forest-900 block">Lead Executor</span>
+                    Eleanor Campbell (Primary Executor)
+                  </div>
+                </div>
+
+                <!-- Right Tasks List -->
+                <div class="md:col-span-8 space-y-3">
+                  <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-white">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-forest-700"></i>
+                      <span class="text-xs sm:text-sm font-medium text-forest-900">Obtain Funeral Director’s Statement of Death</span>
+                    </div>
+                    <span class="text-[11px] font-medium text-forest-800 bg-forest-800/10 px-2.5 py-1 rounded-full">Completed</span>
+                  </div>
+
+                  <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-linen-50/70">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="circle-dashed" class="w-4 h-4 text-forest-700"></i>
+                      <span class="text-xs sm:text-sm font-medium text-forest-900">Notify Service Canada (CPP Death Benefit &amp; OAS)</span>
+                    </div>
+                    <a href="https://app.afta.ca" class="text-[11px] font-semibold text-linen-50 bg-forest-800 hover:bg-forest-700 px-3 py-1 rounded-full transition shadow-xs">
+                      Draft Notice
+                    </a>
+                  </div>
+
+                  <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-white">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="clock" class="w-4 h-4 text-amber-700"></i>
+                      <span class="text-xs sm:text-sm font-medium text-forest-900">Secure and inspect physical residence &amp; notify insurer</span>
+                    </div>
+                    <span class="text-[11px] font-medium text-amber-900 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">Pending</span>
+                  </div>
+
+                  <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-white">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="calendar" class="w-4 h-4 text-forest-800/40"></i>
+                      <span class="text-xs sm:text-sm font-medium text-forest-900">Request formal appraisal for Estate Administration Tax</span>
+                    </div>
+                    <span class="text-[11px] font-medium text-forest-800/60 bg-linen-100 px-2.5 py-1 rounded-full">Upcoming</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- TAB 2: VAULT -->
+            <div id="tab-content-vault" class="hidden space-y-3">
+              <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-white">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="file-lock-2" class="w-5 h-5 text-forest-700"></i>
+                  <div>
+                    <p class="text-sm font-medium text-forest-900">Original Will &amp; Codicils</p>
+                    <p class="text-xs text-forest-800/60">Notarized &bull; Encrypted with local master key</p>
+                  </div>
+                </div>
+                <span class="text-xs font-mono text-forest-800">Verified</span>
+              </div>
+              <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-white">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="file-text" class="w-5 h-5 text-forest-700"></i>
+                  <div>
+                    <p class="text-sm font-medium text-forest-900">Land Transfer &amp; Property Deed</p>
+                    <p class="text-xs text-forest-800/60">Registry PIN #09281-22A</p>
+                  </div>
+                </div>
+                <span class="text-xs font-mono text-forest-800">Stored</span>
+              </div>
+            </div>
+
+            <!-- TAB 3: OFFICIAL FORMS -->
+            <div id="tab-content-forms" class="hidden space-y-3">
+              <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-white">
+                <div>
+                  <p class="text-sm font-medium text-forest-900">Application for Canada Pension Plan Death Benefit (ISP1200)</p>
+                  <p class="text-xs text-forest-800/60">Auto-filled with deceased details &bull; Ready for submission</p>
+                </div>
+                <a href="https://app.afta.ca" class="text-xs font-semibold text-forest-800 hover:underline">Download PDF</a>
+              </div>
+              <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-white">
+                <div>
+                  <p class="text-sm font-medium text-forest-900">Financial Institution Formal Notice of Death</p>
+                  <p class="text-xs text-forest-800/60">Statutory notification packet for Canadian banks</p>
+                </div>
+                <a href="https://app.afta.ca" class="text-xs font-semibold text-forest-800 hover:underline">Download PDF</a>
+              </div>
+            </div>
+
+            <!-- TAB 4: FAMILY COLLABORATION -->
+            <div id="tab-content-collab" class="hidden space-y-3">
+              <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-white">
+                <div>
+                  <p class="text-sm font-medium text-forest-900">Eleanor Campbell</p>
+                  <p class="text-xs text-forest-800/60">Primary Executor &bull; Full administrative permissions</p>
+                </div>
+                <span class="text-xs text-forest-800 font-medium">Lead</span>
+              </div>
+              <div class="p-4 rounded-xl border border-warm flex items-center justify-between bg-white">
+                <div>
+                  <p class="text-sm font-medium text-forest-900">Robert Campbell</p>
+                  <p class="text-xs text-forest-800/60">Co-Executor &bull; Document review &amp; task verification</p>
+                </div>
+                <span class="text-xs text-forest-800/70">Co-Executor</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY WE ARE DIFFERENT / FEATURES GRID -->
+    <section id="why-afta" class="py-20 md:py-28 px-6 border-b border-warm-subtle">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Left Philosophy Column -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-semibold tracking-widest uppercase text-forest-800/60 block">Why We Are Different</span>
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-forest-900 leading-tight">
+              Software that acts like a thoughtful friend, not a cold database.
+            </h2>
+            <div class="space-y-4 text-forest-800/80 font-light text-base leading-relaxed">
+              <p>
+                We understand that dealing with loss is heavy. Most administrative software feels transactional and sterile, adding to the exhaustion.
+              </p>
+              <p>
+                Afta was crafted with guidance from grief therapists, estate lawyers, and funeral directors to feel gentle, human, and grounded at every turn.
+              </p>
+            </div>
+            
+            <div class="p-5 rounded-2xl bg-linen-100/70 border border-warm">
+              <p class="text-xs sm:text-sm font-serif italic text-forest-900 leading-relaxed">
+                &ldquo;Zero dark patterns. No selling of family data. Just clear, compassionate support when you need it most.&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Features 2x2 Grid -->
+          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+            
+            <div class="p-7 rounded-2xl bg-white/70 border border-warm shadow-2xs space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-forest-800/10 flex items-center justify-center text-forest-800">
+                <i data-lucide="compass" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-serif text-xl font-medium text-forest-900">Adaptive Roadmaps</h3>
+              <p class="text-xs sm:text-sm text-forest-800/75 font-light leading-relaxed">
+                Every family’s journey is different. Afta creates a custom, prioritized timeline tailored to your exact province, assets, and estate complexity.
+              </p>
+            </div>
+
+            <div class="p-7 rounded-2xl bg-white/70 border border-warm shadow-2xs space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-forest-800/10 flex items-center justify-center text-forest-800">
+                <i data-lucide="file-check-2" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-serif text-xl font-medium text-forest-900">Intelligent Dispatch</h3>
+              <p class="text-xs sm:text-sm text-forest-800/75 font-light leading-relaxed">
+                Pre-draft formal letters, notifications, and statutory applications with built-in templates verified by Canadian legal professionals.
+              </p>
+            </div>
+
+            <div class="p-7 rounded-2xl bg-white/70 border border-warm shadow-2xs space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-forest-800/10 flex items-center justify-center text-forest-800">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-serif text-xl font-medium text-forest-900">Zero-Knowledge Privacy</h3>
+              <p class="text-xs sm:text-sm text-forest-800/75 font-light leading-relaxed">
+                Your family’s sensitive legal and financial data is encrypted on your device. We can never see, share, or sell your documents.
+              </p>
+            </div>
+
+            <div class="p-7 rounded-2xl bg-white/70 border border-warm shadow-2xs space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-forest-800/10 flex items-center justify-center text-forest-800">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-serif text-xl font-medium text-forest-900">Family Harmony</h3>
+              <p class="text-xs sm:text-sm text-forest-800/75 font-light leading-relaxed">
+                Keep executors, siblings, and beneficiaries informed with granular role-based permissions, avoiding disputes and confusion.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY & TRUST BANNER -->
+    <section id="security" class="py-20 md:py-28 px-6 bg-forest-900 text-linen-100 border-b border-forest-800">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <span class="text-xs font-semibold tracking-widest uppercase text-linen-200/50 block">Privacy &amp; Data Ethics</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-normal text-linen-50 leading-tight">
+              Protected like a bank. <br />Handled like a sacred memory.
+            </h2>
+            <p class="text-sm sm:text-base text-linen-200/75 font-light leading-relaxed max-w-xl">
+              Afterlife administration involves sensitive documents. We treat your family’s information with the utmost respect and institutional-grade protection.
+            </p>
+
+            <div class="grid sm:grid-cols-3 gap-6 pt-4">
+              <div>
+                <p class="font-serif text-xl font-medium text-linen-50">256-bit AES</p>
+                <p class="text-xs text-linen-200/60 mt-1">End-to-end encryption</p>
+              </div>
+              <div>
+                <p class="font-serif text-xl font-medium text-linen-50">PIPEDA</p>
+                <p class="text-xs text-linen-200/60 mt-1">Full Canadian privacy compliance</p>
+              </div>
+              <div>
+                <p class="font-serif text-xl font-medium text-linen-50">Zero Sale</p>
+                <p class="text-xs text-linen-200/60 mt-1">Your data is never monetized</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="p-8 rounded-3xl bg-forest-850 border border-forest-700/60 shadow-xl space-y-4">
+              <span class="inline-flex items-center gap-1.5 text-xs text-sage-300 font-semibold uppercase tracking-wider">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i> Verified Partner Architecture
+              </span>
+              <h3 class="font-serif text-xl font-medium text-linen-50">Certified Compliance</h3>
+              <p class="text-xs text-linen-200/70 font-light leading-relaxed">
+                Certified compliant with Google Play Data Safety requirements and Canadian provincial privacy standards.
+              </p>
+              <a href="https://app.afta.ca" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sage-200 hover:text-white pt-2 transition">
+                Read our Data Safety Commitment &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="py-20 md:py-28 px-6 bg-linen-100/40 border-b border-warm-subtle">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-xs font-semibold tracking-widest uppercase text-forest-800/60 block mb-3">Frequently Asked Questions</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-forest-900 leading-tight mb-3">
+            Everything you need to know about Afta.
+          </h2>
+          <p class="text-xs sm:text-sm text-forest-800/70">
+            Have questions? We’re here to help. Contact us anytime at <a href="mailto:support@afta.ca" class="underline font-medium text-forest-900">support@afta.ca</a>.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <div class="rounded-2xl border border-warm bg-white/70 overflow-hidden">
+            <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex items-center justify-between font-serif text-lg font-medium text-forest-900">
+              <span>What is Afta and who is it designed for?</span>
+              <i data-lucide="chevron-down" id="faq-chevron-1" class="w-5 h-5 text-forest-700 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-answer-1" class="hidden px-6 pb-6 text-sm text-forest-800/75 leading-relaxed font-light">
+              Afta is an afterlife administrative assistant designed to help executors, personal representatives, and grieving families organize, manage, and complete post-life administrative tasks, from bank notifications to estate tax preparation.
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-warm bg-white/70 overflow-hidden">
+            <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex items-center justify-between font-serif text-lg font-medium text-forest-900">
+              <span>Is Afta a replacement for an estate lawyer or accountant?</span>
+              <i data-lucide="chevron-down" id="faq-chevron-2" class="w-5 h-5 text-forest-700 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-answer-2" class="hidden px-6 pb-6 text-sm text-forest-800/75 leading-relaxed font-light">
+              No. Afta complements legal and accounting counsel rather than replacing it. It streamlines document gathering, deadline tracking, and administrative notifications, significantly lowering billable hours and keeping your advisors organized.
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-warm bg-white/70 overflow-hidden">
+            <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex items-center justify-between font-serif text-lg font-medium text-forest-900">
+              <span>How does Afta keep our family’s data secure?</span>
+              <i data-lucide="chevron-down" id="faq-chevron-3" class="w-5 h-5 text-forest-700 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-answer-3" class="hidden px-6 pb-6 text-sm text-forest-800/75 leading-relaxed font-light">
+              All documents stored in Afta are protected using end-to-end 256-bit AES encryption with zero-knowledge architecture. Only authorized executors and family members possess decryption keys.
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-warm bg-white/70 overflow-hidden">
+            <button onclick="toggleFaq(4)" class="w-full p-6 text-left flex items-center justify-between font-serif text-lg font-medium text-forest-900">
+              <span>How much does Afta cost to use?</span>
+              <i data-lucide="chevron-down" id="faq-chevron-4" class="w-5 h-5 text-forest-700 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-answer-4" class="hidden px-6 pb-6 text-sm text-forest-800/75 leading-relaxed font-light">
+              Afta is currently offering free access during our private Ontario beta release. Families who join our beta will retain complimentary access to their estate roadmaps throughout the duration of their case settlement.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRE-FOOTER BETA SIGNUP SECTION -->
+    <section id="contact" class="py-20 md:py-28 px-6 text-center border-b border-warm-subtle">
+      <div class="max-w-xl mx-auto">
+        <div class="w-12 h-12 rounded-full bg-forest-800/10 text-forest-800 flex items-center justify-center mx-auto mb-6">
+          <i data-lucide="sprout" class="w-6 h-6"></i>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal text-forest-900 mb-4">
+          Be part of our gentle beginning.
+        </h2>
+        <p class="text-sm text-forest-800/75 font-light mb-8 leading-relaxed">
+          Join our private beta to receive early access, or connect with us to learn how Afta can support your community.
+        </p>
+
+        <form onsubmit="handleBetaRedirect(event)" class="flex flex-col sm:flex-row items-center gap-2 p-1.5 rounded-2xl sm:rounded-full bg-white border border-warm shadow-md">
+          <input 
+            type="email" 
+            required 
+            placeholder="Enter your email address..." 
+            class="w-full px-5 py-3 rounded-full text-sm bg-transparent outline-none text-forest-900 placeholder:text-forest-800/40 text-center sm:text-left"
+          />
+          <button 
+            type="submit" 
+            class="w-full sm:w-auto px-7 py-3 rounded-full bg-forest-800 hover:bg-forest-700 text-linen-50 text-xs font-semibold uppercase tracking-wider transition whitespace-nowrap shadow-sm"
+          >
+            Join Beta
+          </button>
+        </form>
+        <p class="text-xs text-forest-800/50 mt-3">No spam. Unsubscribe anytime. Strictly confidential.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-forest-900 text-linen-100 py-16 px-6 border-t border-forest-800">
+    <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-12 gap-12">
+      
+      <!-- Brand Mission -->
+      <div class="md:col-span-5 space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="w-7 h-7 rounded-full bg-linen-50 text-forest-900 flex items-center justify-center font-serif text-base italic font-semibold">A</span>
+          <span class="font-serif text-2xl font-normal tracking-tight text-linen-50">Afta</span>
+        </div>
+        <p class="text-sm text-linen-200/60 max-w-sm font-light leading-relaxed">
+          Dedicated to bringing clarity, dignity, and calm guidance to families navigating estate administration and bereavement.
+        </p>
+        <p class="text-xs text-linen-200/40 pt-2">&copy; 2026 Afta Technologies Inc. All rights reserved.</p>
+      </div>
+
+      <!-- Column 1: Platform -->
+      <div class="md:col-span-2 space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-linen-200/40 block">Platform</span>
+        <ul class="space-y-2 text-sm text-linen-200/70">
+          <li><a href="#how-it-works" class="hover:text-linen-50 transition">How it Works</a></li>
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">Document Vault</a></li>
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">Intelligent Forms</a></li>
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">Family Access</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Organizations -->
+      <div class="md:col-span-3 space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-linen-200/40 block">Organizations</span>
+        <ul class="space-y-2 text-sm text-linen-200/70">
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">For Funeral Homes</a></li>
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">For Estate Planners</a></li>
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">Partner Program</a></li>
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">Schedule a Director Demo</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Legal & Safety -->
+      <div class="md:col-span-2 space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-linen-200/40 block">Legal &amp; Safety</span>
+        <ul class="space-y-2 text-sm text-linen-200/70">
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">Privacy Policy</a></li>
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">Terms of Service</a></li>
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">Data Safety</a></li>
+          <li><a href="https://app.afta.ca" class="hover:text-linen-50 transition">Security Architecture</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Disclaimer -->
+    <div class="max-w-7xl mx-auto pt-10 mt-12 border-t border-forest-800 flex flex-col sm:flex-row items-center justify-between text-xs text-linen-200/50 gap-4">
+      <p>Designed with care in Ontario, Canada. Afta is not a law firm and does not provide legal advice.</p>
+      <p>Zero-Knowledge Canadian Infrastructure</p>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Tab Switching for Product Mockup
+    function switchTab(tabName) {
+      const tabs = ['checklist', 'vault', 'forms', 'collab'];
+      tabs.forEach(tab => {
+        const btn = document.getElementById(`tab-btn-${tab}`);
+        const content = document.getElementById(`tab-content-${tab}`);
+        
+        if (tab === tabName) {
+          btn.classList.add('border-forest-800', 'text-forest-900', 'font-semibold');
+          btn.classList.remove('border-transparent');
+          content.classList.remove('hidden');
+        } else {
+          btn.classList.remove('border-forest-800', 'text-forest-900', 'font-semibold');
+          btn.classList.add('border-transparent');
+          content.classList.add('hidden');
+        }
+      });
+    }
+
+    // FAQ Accordion
+    function toggleFaq(id) {
+      const answer = document.getElementById(`faq-answer-${id}`);
+      const chevron = document.getElementById(`faq-chevron-${id}`);
+      const isHidden = answer.classList.contains('hidden');
+      
+      for(let i=1; i<=4; i++) {
+        document.getElementById(`faq-answer-${i}`).classList.add('hidden');
+        document.getElementById(`faq-chevron-${i}`).classList.remove('rotate-180');
+      }
+
+      if (isHidden) {
+        answer.classList.remove('hidden');
+        chevron.classList.add('rotate-180');
+      }
+    }
+
+    // Redirect to live app on beta signup
+    function handleBetaRedirect(e) {
+      e.preventDefault();
+      window.location.href = "https://app.afta.ca";
+    }
+  </script>
+</body>
+</html>
